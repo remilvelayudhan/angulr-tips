@@ -10,4 +10,10 @@ ng generate @ngrx/schematics:store AppState --root --module app.module.ts
 
 3) npm install @ngrx/{store,effects,entity,store-devtools} --save
 
+ng add @ngrx/store@latest
+ng add @ngrx/entity@latest
+ng add @ngrx/effects@latest
+ng add @ngrx/store-devtools@latest
+
+
 
