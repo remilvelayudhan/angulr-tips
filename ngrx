@@ -1,0 +1,12 @@
+
+  NGRX
+  
+1) 
+ng generate @ngrx/schematics:store State --root --module app.module.ts
+ng generate @ngrx/schematics:store AppState --root --module app.module.ts
+
+ng config cli.defaultCollection @ngrx/schematics
+
+npm install @ngrx/{store,effects,entity,store-devtools} --save
+
+
