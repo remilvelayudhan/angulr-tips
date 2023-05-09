@@ -12,6 +12,9 @@
   private handleError(error:HttpErrorResponse):Observable<never>{
    let errorMessage = `an error occoured ${error.error.errorMessage}`;
    console.error(error);
-   return throwError(()=>{errorMessage})
+     return throwError(() => new Error(errorMessage));
   }
   //-----------------------------------------------------------------------
+
+
+ this.$sampledata= this.dataServices.$sampledata.pipe(catchError(err=>{this.errorMessage= err; return EMPTY}));
