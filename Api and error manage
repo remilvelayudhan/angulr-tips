@@ -1,1 +1,17 @@
-1) Observable...
+//-----------------------------------------------------------------------
+  getAll():Observable<any>{
+   return this.http.get<any>(`https://dummyjson.com/users`).pipe(
+    catchError(this.handleError)
+   );
+  }
+  //-----------------------------------------------------------------------
+  $sampledata = this.http.get<any>(`https://dummyjson.com/users`).pipe(
+    catchError(this.handleError)
+   );
+  //-----------------------------------------------------------------------
+  private handleError(error:HttpErrorResponse):Observable<never>{
+   let errorMessage = `an error occoured ${error.error.errorMessage}`;
+   console.error(error);
+   return throwError(()=>{errorMessage})
+  }
+  //-----------------------------------------------------------------------
